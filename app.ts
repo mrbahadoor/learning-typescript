@@ -1,28 +1,32 @@
 // const person: {
 //     name: string;
 //     age: number;
+//     hobbies: string[];
+//     role: [number, string]; //tuple with fixed length and first element is number and second element is string
 // } = {
 //     name: 'John',
-//     age: 30
+//     age: 30,
+//     hobbies: ['Sports', 'Cooking'],
+//     role:[1, 'author']
 // };
 
-const person: {
-    name: string;
-    age: number;
-    hobbies: string[];
-    role: [number, string]; //tuple with fixed length and first element is number and second element is string
-} = {
+// person.role.push('admin');
+// // person.role[1] = 10; // !!! ERROR !!!
+
+enum Role { ADMIN, READ_ONLY, AUTHOR }; // declare enum
+
+const person = {
     name: 'John',
     age: 30,
     hobbies: ['Sports', 'Cooking'],
-    role:[1, 'author']
+    role: Role.ADMIN // Access enum value
 };
 
-person.role.push('admin');
-// person.role[1] = 10; // !!! ERROR !!!
 
-let favoriteActivities: string[]; //type array of strings
-favoriteActivities = ['Sports'];
+
+
+// let favoriteActivities: string[]; //type array of strings
+// favoriteActivities = ['Sports'];
 
 // console.log(person.name);
 
