@@ -1,7 +1,9 @@
+type Combinable = number | string; //Type alias
+
 function combine(
-    input1:number | string,
-    input2:number | string,
-    resultConversion: 'as-number' | 'as-text'
+    input1: Combinable,
+    input2: Combinable,
+    resultConversion: 'as-number' | 'as-text' //Literal type
 ) {
     let result;
     if(typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
